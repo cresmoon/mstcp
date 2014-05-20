@@ -1,6 +1,6 @@
 # Partial Tkenv config file -- see $HOME/.tkenvrc as well
 inspector "MaxWeightNet" "MaxWeightNet" "2" "572x341+56+10:normal"
-inspector "MaxWeightNet.MW1" "MaxWeight" "2" "565x341+56+391:normal"
+inspector "MaxWeightNet.MW1" "MaxWeight" "2" "565x341+56+391:iconic"
 inspector "RoundRobin.S1" "Source" "1" "460x314+85+404:normal"
 inspector "MaxWeightNet.MW.Clk" "MaxWTimer" "1" "460x314+52+52:normal"
 inspector "MaxWeightNet.MW" "MaxWeight" "2" "565x405+104+275:normal"

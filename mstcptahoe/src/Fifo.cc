@@ -9,6 +9,7 @@
 
 
 #include<Fifo.h>
+#include <omnetpp.h>
 
 namespace mstcp2 {
 
@@ -23,8 +24,9 @@ simtime_t Fifo::startService(cMessage *msg)
 
 void Fifo::endService(cMessage *msg)
 {
+    simtime_t delayT = 1;
 //    EV << "Completed service of " << msg->getName() << endl;
-    send( msg, "out" );
+    sendDelayed(msg, delayT ,"out", -1);
 }
 
 }; //namespace

@@ -39,13 +39,13 @@ void Source::initialize()
 
     //khoi tao RTT min
     minRTT  =   65535;
-    avgRTT  =   0.2;
+    avgRTT  =   0.1;
 
     seqNum      =   0;
     cWin        =   1;
     cWinMax     = 20000;
 
-    for(int i = 1; i<= cWin; i++ )
+    for(int i = 0; i< cWin; i++ )
     //khoi tao cac phan tu mang ackRcv
     {
         ackRcv[i]   =   -1;
@@ -53,8 +53,8 @@ void Source::initialize()
 
     timerMessage = new cMessage("timer");
 //    int t = getId();
-//    int t = uniform(1,4);
-    scheduleAt(simTime() , timerMessage);
+    int t = uniform(1,4);
+    scheduleAt(simTime() +t, timerMessage);
 }
 
 void Source::handleMessage(cMessage *msg)
@@ -69,37 +69,39 @@ void Source::handleMessage(cMessage *msg)
         {
             tcpMsg * rcMsg = check_and_cast<tcpMsg *>(msg);
             int t = rcMsg->getSeq();
+            // neu co phan tu do thi gui lai nen k gan -1
             int x = haveElement(t,0);
 
            if( x == 1 )
            {
 //               EV<<"Msg nhan dc la :"<< temp <<endl;
-
                if(cWin>1)
                cWin = cWin/2;
                EV<< "window cua S"<< getId() -1 <<" la : "<< cWin << endl;
                emit(cWinSignal, cWin);
                sendMessage(t);
            }
-//         drop(msg);
+//           drop(msg);
            cancelAndDelete(msg);
         }
         else
         {
             //EV<<"Msg nhan dc la :"<< temp <<endl;
-            for(int i = 1; i<=cWin; i++)
-
+            for(int i = 0; i<cWin; i++)
                 if(ackRcv[i] == -1)                     //neu window con trong thi gui goi
                 {
                         ackRcv[i]   =   seqNum;         // dua so seq cua goi vao mang theo doi ack
                         sendMessage(seqNum);
                         seqNum++;                       //Tang so seq number len 1
                 }
-            if(strcmp(temp,"Next")==0) cancelAndDelete(msg);
+            if(strcmp(temp,"Next")==0)
+                cancelAndDelete(msg);
+            else
+                drop(msg);
         }
     }
     //if la ACK msg
-    else if (strcmp(temp,"ACKs")==0)
+    else //if (strcmp(temp,"ACKs")==0)
     {
             tcpMsg * rcMsg = check_and_cast<tcpMsg *>(msg);
             const char * name = getFullName();
@@ -107,7 +109,7 @@ void Source::handleMessage(cMessage *msg)
             int t   =   rcMsg->getSeq();
             EV<<"Nhan dc ACK cua Msg thu' "<< t <<endl;
 
-            int k   =   haveElement(t, -1);
+            int k   =   haveElement(t, 1);
 
             if(k==1)
             {
@@ -116,8 +118,8 @@ void Source::handleMessage(cMessage *msg)
 
 //                //cap nhat min RTT
 //                if (minRTT > delayT)    minRTT = delayT;
-//                //cap nhat average RTT
-//                avgRTT =    ((seqNum -1)/seqNum * avgRTT) + (1/seqNum)*delayT;
+                //cap nhat average RTT
+                avgRTT =    ((seqNum -1)/seqNum * avgRTT) + (1/seqNum)*delayT;
 
                 cWin = cWin + 1;
                 ackRcv[cWin] = -1;
@@ -125,8 +127,10 @@ void Source::handleMessage(cMessage *msg)
                 emit(cWinSignal, cWin);
                 EV<< "window cua S"<< getId() -1 <<" la : "<< cWin << endl;
 
+                simtime_t   nextT   =   (1+avgRTT)/cWin;
+                EV<<"Time nextT :"<<nextT<<endl;
                 cMessage * nextMsg = new cMessage("Next");
-                scheduleAt(simTime() + 0.2, nextMsg );
+                scheduleAt(simTime() + nextT , nextMsg );
             }
             cancelAndDelete(msg);
     }
@@ -134,12 +138,13 @@ void Source::handleMessage(cMessage *msg)
 
 int Source::haveElement(int x, int y)
 {
-        for(int i = 1; i <= cWin; i++)
+        for(int i = 0; i < cWin; i++)
         {
             if(ackRcv[i] == x)
-            {   //set lai ack
-                if(y==-1) ackRcv[i]   =   -1;
-                     return 1;
+            {   //set lai ack neu cho y = 1
+                if(y==1)
+                    ackRcv[i]   =   -1;
+                return 1;
             }
         }
         return 0;
@@ -156,7 +161,8 @@ void Source::sendMessage(int seqNumber)
         send(job,"out");
 
         tcpMsg * ackTimeout = new tcpMsg("timeout");
-        simtime_t   timeOut   = avgRTT+3;
+        simtime_t   timeOut   = (avgRTT+6)/cWin ;
+        EV<<"Thoi gian timeout cua goi "<<seqNumber<<" la: "<< timeOut<<endl;
             ackTimeout->setSeq(seqNumber);
             scheduleAt(simTime() + timeOut, ackTimeout );
 }

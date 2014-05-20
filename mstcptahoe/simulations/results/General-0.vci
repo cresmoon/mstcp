@@ -1,0 +1,62 @@
+                                                                
+version 2
+run General-0-20140520-14:38:43-5292
+attr configname General
+attr datetime 20140520-14:38:43
+attr experiment General
+attr inifile maxWeightNet.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network MaxWeightNet
+attr processid 5292
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 0  MaxWeightNet.S1  cwnd:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "window length, vector"
+vector 1  MaxWeightNet.S2  cwnd:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "window length, vector"
+vector 2  MaxWeightNet.S3  cwnd:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "window length, vector"
+vector 3  MaxWeightNet.S4  cwnd:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "window length, vector"
+vector 4  MaxWeightNet.MW1.Q1  qlen:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 6  MaxWeightNet.MW1.Q2  qlen:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 8  MaxWeightNet.MW1.Q3  qlen:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 10  MaxWeightNet.MW1.Q4  qlen:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 5  MaxWeightNet.MW1.Q1  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time at dequeue, vector"
+attr unit  s
+vector 7  MaxWeightNet.MW1.Q2  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time at dequeue, vector"
+attr unit  s
+vector 12  MaxWeightNet.D1  arrivals  ETV
+attr interpolationmode  none
+vector 9  MaxWeightNet.MW1.Q3  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time at dequeue, vector"
+attr unit  s
+vector 13  MaxWeightNet.D2  arrivals  ETV
+attr interpolationmode  none
+vector 11  MaxWeightNet.MW1.Q4  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time at dequeue, vector"
+attr unit  s

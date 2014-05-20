@@ -62,7 +62,12 @@ void AbstractFifo::handleMessage(cMessage *msg)
 //        EV<< " Nhan duoc goi Data\n";
         msg->setTimestamp();                    //gan cho msg timestamp la thoi diem hien tai
         EV <<"T : " << msg->getTimestamp() << endl;
-        queue.insert( msg );
+        int q = queue.length();
+
+        if(q >10)
+            delete(msg);
+        else
+            queue.insert( msg );
 
         emit(qlenSignal, queue.length());
 

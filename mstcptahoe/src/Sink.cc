@@ -34,7 +34,7 @@ void Sink::initialize()
 void Sink::handleMessage(cMessage *msg)
 {
     simtime_t d = simTime() - lastArrival;
-    simtime_t delay = 0.1;
+    simtime_t delay = 1;
 //    EV << "Thoi gian toi gan nhat "<<d<< endl;
 
     const char * temp ;
@@ -48,7 +48,8 @@ void Sink::handleMessage(cMessage *msg)
            {
                EV << "\"Losing\" message.\n";
                bubble("message lost");  // making animation more informative...
-               delete msg;
+               drop(msg);
+               cancelAndDelete(msg);
            }
         else
         {
@@ -64,7 +65,9 @@ void Sink::handleMessage(cMessage *msg)
             replyMsg->setTimestamp(msg->getTimestamp());    //copy lai timestamp luc gui goi di
 
             sendDelayed(replyMsg, delay ,"out", -1);
-            delete msg;
+
+            drop(msg);
+            cancelAndDelete(msg);
         }
 
     }

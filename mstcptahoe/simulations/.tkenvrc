@@ -1,0 +1,14 @@
+# Partial Tkenv config file -- see $HOME/.tkenvrc as well
+inspector "MaxWeightNet" "MaxWeightNet" "2" "572x341+704+22:normal"
+inspector "MaxWeightNet.MW1" "MaxWeight" "2" "565x341+720+392:normal"
+inspector "RoundRobin.S1" "Source" "1" "460x314+85+404:normal"
+inspector "MaxWeightNet.MW.Clk" "MaxWTimer" "1" "460x314+52+52:normal"
+inspector "MaxWeightNet.MW" "MaxWeight" "2" "565x405+104+275:normal"
+inspector "RoundRobin.RR.Clk" "RRTime" "1" "460x314+75+75:normal"
+inspector "RoundRobin.RR.Q1.queue" "cQueue" "1" "360x288+665+439:normal"
+inspector "RoundRobin.RR.Q2" "Fifo" "1" "460x314+21+0:normal"
+inspector "RoundRobin" "RoundRobin" "2" "565x342+25+25:normal"
+inspector "RoundRobin.RR" "Robin" "2" "565x342+671+169:normal"
+inspector "RoundRobin1" "RoundRobin1" "2" "565x342+25+25:normal"
+inspector "RoundRobin.RR.Q1" "Fifo" "1" "422x396+932+399:normal"
+

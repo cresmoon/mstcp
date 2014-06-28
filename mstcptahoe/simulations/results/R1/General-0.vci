@@ -1,0 +1,114 @@
+file 741045 1403549963                                          
+version 2
+run General-0-20140624-01:59:17-3384
+attr configname General
+attr datetime 20140624-01:59:17
+attr experiment General
+attr inifile maxWeightNet.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network MaxWeightNet
+attr processid 3384
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 0  MaxWeightNet.S1  cwnd:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "window length, vector"
+vector 1  MaxWeightNet.S1  seqnum:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "ack receive, vector"
+vector 2  MaxWeightNet.S2  cwnd:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "window length, vector"
+vector 3  MaxWeightNet.S2  seqnum:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "ack receive, vector"
+vector 4  MaxWeightNet.S3  cwnd:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "window length, vector"
+vector 5  MaxWeightNet.S3  seqnum:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "ack receive, vector"
+vector 6  MaxWeightNet.S4  cwnd:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "window length, vector"
+vector 7  MaxWeightNet.S4  seqnum:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "ack receive, vector"
+vector 8  MaxWeightNet.D1  arrive:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "message arrived, vector"
+vector 9  MaxWeightNet.D2  arrive:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "message arrived, vector"
+vector 10  MaxWeightNet.D3  arrive:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "message arrived, vector"
+vector 11  MaxWeightNet.D4  arrive:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "message arrived, vector"
+vector 12  MaxWeightNet.MW1.Q1  qlen:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 14  MaxWeightNet.MW1.Q2  qlen:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 16  MaxWeightNet.MW1.Q3  qlen:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 18  MaxWeightNet.MW1.Q4  qlen:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 13  MaxWeightNet.MW1.Q1  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time at dequeue, vector"
+attr unit  s
+vector 20  MaxWeightNet.D1  arrivals  ETV
+attr interpolationmode  none
+vector 19  MaxWeightNet.MW1.Q4  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time at dequeue, vector"
+attr unit  s
+vector 23  MaxWeightNet.D4  arrivals  ETV
+attr interpolationmode  none
+vector 15  MaxWeightNet.MW1.Q2  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time at dequeue, vector"
+attr unit  s
+vector 21  MaxWeightNet.D2  arrivals  ETV
+attr interpolationmode  none
+vector 17  MaxWeightNet.MW1.Q3  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time at dequeue, vector"
+attr unit  s
+vector 22  MaxWeightNet.D3  arrivals  ETV
+attr interpolationmode  none
+0	3220 15769 0 116231 0 99.9 1000 1 17 1484 9486
+1	18989 16736 0 116231 0 99.9 1000 0 70 52712 2883898
+2	35725 17527 0 116232 0 99.9 1000 1 405 202063 51217193
+3	53252 19109 0 116232 0 99.9 1000 0 17735 8883902 105119541968
+4	72361 15739 0 116233 0 99.9 1000 1 5 1120 1710
+5	88100 16707 0 116233 0 99.9 1000 0 44 26987 823875
+6	104807 15739 0 116234 0 99.9 1000 1 7 1179 2405
+7	120546 16736 0 116234 0 99.9 1000 0 47 30008 995450
+8	137282 16735 0 116235 0 99.9 1000 0 16 15947 254951
+9	154017 18620 0 116236 0 99.9 1000 0 9961 4966077 32994479963
+10	172637 16739 0 116237 0 99.9 1000 0 4 3992 15962
+11	189376 16739 0 116238 0 99.9 1000 0 6 5987 35901
+12	206115 17734 0 116239 0 99.9 1000 0 54 36765 1452739
+13	223849 299 14 527 0.01 0.51 16 0.009 0.199 1.415 0.174075
+14	224148 18611 0 116240 0 99.9 1000 0 101 98923 9869669
+15	242759 217685 22 116340 0.03 99.99 9971 0.009 1.009 9835.42 9783.9457500009
+16	460444 17646 0 116241 0 99.9 1000 0 40 22995 623969
+17	478090 72 26 201 0.04 0.22 4 0.009 0.069 0.187 0.011203
+18	478162 17676 0 116242 0 99.9 1000 0 41 24021 671329
+19	495838 109 18 293 0.02 0.3 6 0.009 0.129 0.365 0.033805
+20	495947 16966 15 116235 0.01 99.9 1015 1 1 1015 1015
+21	512913 194531 23 116341 0.03 99.99 10970 1 1 10970 10970
+22	707444 16786 27 116237 0.04 99.9 1003 1 1 1003 1003
+23	724230 16815 19 116238 0.02 99.9 1005 1 1 1005 1005

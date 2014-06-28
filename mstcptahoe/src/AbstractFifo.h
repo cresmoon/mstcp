@@ -25,10 +25,20 @@ class AbstractFifo : public cSimpleModule
 {
   protected:
 
+    int     dropThresh;
+    cMessage *msgServiced;
     cQueue queue;
+    cMessage *updateQL;
+
+
     simsignal_t qlenSignal;
     simsignal_t busySignal;
     simsignal_t queueingTimeSignal;
+
+  public:
+
+    AbstractFifo();
+    virtual ~AbstractFifo();
 
   protected:
     virtual void initialize();

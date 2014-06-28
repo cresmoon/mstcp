@@ -20,9 +20,9 @@ namespace mstcp2 {
  */
 class Fifo : public AbstractFifo
 {
-  protected:
-    virtual simtime_t startService(cMessage *msg);
-    virtual void endService(cMessage *msg);
+    protected:
+        virtual simtime_t startService(cMessage *msg);
+        virtual void endService(cMessage *msg);
 };
 
 }; //namespace

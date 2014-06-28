@@ -1,0 +1,425 @@
+version 2
+run General-0-20140625-20:54:27-4832
+attr configname General
+attr datetime 20140625-20:54:27
+attr experiment General
+attr inifile maxWeightNet.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network MaxWeightNet
+attr processid 4832
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+scalar MaxWeightNet.S1 	seqnum:count 	1000
+attr interpolationmode  sample-hold
+attr title  "ack receive, count"
+scalar MaxWeightNet.S1 	seqnum:sum 	1581912
+attr interpolationmode  sample-hold
+attr title  "ack receive, sum"
+scalar MaxWeightNet.S1 	seqnum:mean 	1581.912
+attr interpolationmode  sample-hold
+attr title  "ack receive, mean"
+scalar MaxWeightNet.S1 	seqnum:timeavg 	1581.7830226418
+attr interpolationmode  sample-hold
+attr title  "ack receive, timeavg"
+scalar MaxWeightNet.S1 	seqnum:max 	3194
+attr interpolationmode  sample-hold
+attr title  "ack receive, max"
+scalar MaxWeightNet.S1 	cwnd:count 	250
+attr interpolationmode  sample-hold
+attr title  "window length, count"
+scalar MaxWeightNet.S1 	cwnd:sum 	12606.850941303
+attr interpolationmode  sample-hold
+attr title  "window length, sum"
+scalar MaxWeightNet.S1 	cwnd:mean 	50.427403765212
+attr interpolationmode  sample-hold
+attr title  "window length, mean"
+scalar MaxWeightNet.S1 	cwnd:timeavg 	50.427387379307
+attr interpolationmode  sample-hold
+attr title  "window length, timeavg"
+scalar MaxWeightNet.S1 	cwnd:max 	52.342558112565
+attr interpolationmode  sample-hold
+attr title  "window length, max"
+scalar MaxWeightNet.S2 	seqnum:count 	1000
+attr interpolationmode  sample-hold
+attr title  "ack receive, count"
+scalar MaxWeightNet.S2 	seqnum:sum 	1416343
+attr interpolationmode  sample-hold
+attr title  "ack receive, sum"
+scalar MaxWeightNet.S2 	seqnum:mean 	1416.343
+attr interpolationmode  sample-hold
+attr title  "ack receive, mean"
+scalar MaxWeightNet.S2 	seqnum:timeavg 	1416.2274981999
+attr interpolationmode  sample-hold
+attr title  "ack receive, timeavg"
+scalar MaxWeightNet.S2 	seqnum:max 	2860
+attr interpolationmode  sample-hold
+attr title  "ack receive, max"
+scalar MaxWeightNet.S2 	cwnd:count 	250
+attr interpolationmode  sample-hold
+attr title  "window length, count"
+scalar MaxWeightNet.S2 	cwnd:sum 	12614.203340932
+attr interpolationmode  sample-hold
+attr title  "window length, sum"
+scalar MaxWeightNet.S2 	cwnd:mean 	50.456813363728
+attr interpolationmode  sample-hold
+attr title  "window length, mean"
+scalar MaxWeightNet.S2 	cwnd:timeavg 	50.456805222298
+attr interpolationmode  sample-hold
+attr title  "window length, timeavg"
+scalar MaxWeightNet.S2 	cwnd:max 	54.698656166959
+attr interpolationmode  sample-hold
+attr title  "window length, max"
+scalar MaxWeightNet.S3 	seqnum:count 	1000
+attr interpolationmode  sample-hold
+attr title  "ack receive, count"
+scalar MaxWeightNet.S3 	seqnum:sum 	1147079
+attr interpolationmode  sample-hold
+attr title  "ack receive, sum"
+scalar MaxWeightNet.S3 	seqnum:mean 	1147.079
+attr interpolationmode  sample-hold
+attr title  "ack receive, mean"
+scalar MaxWeightNet.S3 	seqnum:timeavg 	1146.9932394592
+attr interpolationmode  sample-hold
+attr title  "ack receive, timeavg"
+scalar MaxWeightNet.S3 	seqnum:max 	2219
+attr interpolationmode  sample-hold
+attr title  "ack receive, max"
+scalar MaxWeightNet.S3 	cwnd:count 	250
+attr interpolationmode  sample-hold
+attr title  "window length, count"
+scalar MaxWeightNet.S3 	cwnd:sum 	12554.988884615
+attr interpolationmode  sample-hold
+attr title  "window length, sum"
+scalar MaxWeightNet.S3 	cwnd:mean 	50.219955538462
+attr interpolationmode  sample-hold
+attr title  "window length, mean"
+scalar MaxWeightNet.S3 	cwnd:timeavg 	50.219940741772
+attr interpolationmode  sample-hold
+attr title  "window length, timeavg"
+scalar MaxWeightNet.S3 	cwnd:max 	53.279486381785
+attr interpolationmode  sample-hold
+attr title  "window length, max"
+scalar MaxWeightNet.S4 	seqnum:count 	1000
+attr interpolationmode  sample-hold
+attr title  "ack receive, count"
+scalar MaxWeightNet.S4 	seqnum:sum 	1019347
+attr interpolationmode  sample-hold
+attr title  "ack receive, sum"
+scalar MaxWeightNet.S4 	seqnum:mean 	1019.347
+attr interpolationmode  sample-hold
+attr title  "ack receive, mean"
+scalar MaxWeightNet.S4 	seqnum:timeavg 	1019.2774221938
+attr interpolationmode  sample-hold
+attr title  "ack receive, timeavg"
+scalar MaxWeightNet.S4 	seqnum:max 	1889
+attr interpolationmode  sample-hold
+attr title  "ack receive, max"
+scalar MaxWeightNet.S4 	cwnd:count 	250
+attr interpolationmode  sample-hold
+attr title  "window length, count"
+scalar MaxWeightNet.S4 	cwnd:sum 	12553.271579796
+attr interpolationmode  sample-hold
+attr title  "window length, sum"
+scalar MaxWeightNet.S4 	cwnd:mean 	50.213086319182
+attr interpolationmode  sample-hold
+attr title  "window length, mean"
+scalar MaxWeightNet.S4 	cwnd:timeavg 	50.213076701504
+attr interpolationmode  sample-hold
+attr title  "window length, timeavg"
+scalar MaxWeightNet.S4 	cwnd:max 	51.952078879317
+attr interpolationmode  sample-hold
+attr title  "window length, max"
+statistic MaxWeightNet.D1 	"interarrival times"
+field count 4149
+field mean 0.024092552422271
+field stddev 0.023383662565833
+field sum 99.960000000003
+field sqrsum 4.6764000000001
+field min 0
+field max 0.1
+bin	-INF	0
+bin	-0.05	0
+bin	-0.043333333333333	0
+bin	-0.036666666666667	0
+bin	-0.03	0
+bin	-0.023333333333333	0
+bin	-0.016666666666667	0
+bin	-0.01	0
+bin	-0.0033333333333333	293
+bin	0.0033333333333333	0
+bin	0.01	1958
+bin	0.016666666666667	584
+bin	0.023333333333333	0
+bin	0.03	379
+bin	0.036666666666667	263
+bin	0.043333333333333	0
+bin	0.05	203
+bin	0.056666666666667	135
+bin	0.063333333333333	0
+bin	0.07	92
+bin	0.076666666666667	80
+bin	0.083333333333333	0
+bin	0.09	48
+bin	0.096666666666667	114
+bin	0.10333333333333	0
+bin	0.11	0
+bin	0.11666666666667	0
+bin	0.12333333333333	0
+bin	0.13	0
+bin	0.13666666666667	0
+bin	0.14333333333333	0
+bin	0.15	0
+scalar MaxWeightNet.D1 	arrive:count 	1000
+attr interpolationmode  sample-hold
+attr title  "message arrived, count"
+scalar MaxWeightNet.D1 	arrive:sum 	1532450
+attr interpolationmode  sample-hold
+attr title  "message arrived, sum"
+scalar MaxWeightNet.D1 	arrive:mean 	1532.45
+attr interpolationmode  sample-hold
+attr title  "message arrived, mean"
+scalar MaxWeightNet.D1 	arrive:timeavg 	1532.3210656853
+attr interpolationmode  sample-hold
+attr title  "message arrived, timeavg"
+scalar MaxWeightNet.D1 	arrive:max 	3144
+attr interpolationmode  sample-hold
+attr title  "message arrived, max"
+statistic MaxWeightNet.D2 	"interarrival times"
+field count 3809
+field mean 0.026227356261487
+field stddev 0.025195074577206
+field sum 99.900000000003
+field sqrsum 5.0374
+field min 0
+field max 0.1
+bin	-INF	0
+bin	-0.05	0
+bin	-0.043333333333333	0
+bin	-0.036666666666667	0
+bin	-0.03	0
+bin	-0.023333333333333	0
+bin	-0.016666666666667	0
+bin	-0.01	0
+bin	-0.0033333333333333	267
+bin	0.0033333333333333	0
+bin	0.01	1650
+bin	0.016666666666667	533
+bin	0.023333333333333	0
+bin	0.03	402
+bin	0.036666666666667	261
+bin	0.043333333333333	0
+bin	0.05	179
+bin	0.056666666666667	139
+bin	0.063333333333333	0
+bin	0.07	104
+bin	0.076666666666667	55
+bin	0.083333333333333	0
+bin	0.09	63
+bin	0.096666666666667	156
+bin	0.10333333333333	0
+bin	0.11	0
+bin	0.11666666666667	0
+bin	0.12333333333333	0
+bin	0.13	0
+bin	0.13666666666667	0
+bin	0.14333333333333	0
+bin	0.15	0
+scalar MaxWeightNet.D2 	arrive:count 	1000
+attr interpolationmode  sample-hold
+attr title  "message arrived, count"
+scalar MaxWeightNet.D2 	arrive:sum 	1367337
+attr interpolationmode  sample-hold
+attr title  "message arrived, sum"
+scalar MaxWeightNet.D2 	arrive:mean 	1367.337
+attr interpolationmode  sample-hold
+attr title  "message arrived, mean"
+scalar MaxWeightNet.D2 	arrive:timeavg 	1367.2215777262
+attr interpolationmode  sample-hold
+attr title  "message arrived, timeavg"
+scalar MaxWeightNet.D2 	arrive:max 	2810
+attr interpolationmode  sample-hold
+attr title  "message arrived, max"
+statistic MaxWeightNet.D3 	"interarrival times"
+field count 3172
+field mean 0.031519546027743
+field stddev 0.028234476779493
+field sum 99.980000000001
+field sqrsum 5.6791999999999
+field min 0
+field max 0.1
+bin	-INF	0
+bin	-0.05	0
+bin	-0.043333333333333	0
+bin	-0.036666666666667	0
+bin	-0.03	0
+bin	-0.023333333333333	0
+bin	-0.016666666666667	0
+bin	-0.01	0
+bin	-0.0033333333333333	248
+bin	0.0033333333333333	0
+bin	0.01	1050
+bin	0.016666666666667	442
+bin	0.023333333333333	0
+bin	0.03	360
+bin	0.036666666666667	269
+bin	0.043333333333333	0
+bin	0.05	186
+bin	0.056666666666667	158
+bin	0.063333333333333	0
+bin	0.07	115
+bin	0.076666666666667	71
+bin	0.083333333333333	0
+bin	0.09	73
+bin	0.096666666666667	200
+bin	0.10333333333333	0
+bin	0.11	0
+bin	0.11666666666667	0
+bin	0.12333333333333	0
+bin	0.13	0
+bin	0.13666666666667	0
+bin	0.14333333333333	0
+bin	0.15	0
+scalar MaxWeightNet.D3 	arrive:count 	1000
+attr interpolationmode  sample-hold
+attr title  "message arrived, count"
+scalar MaxWeightNet.D3 	arrive:sum 	1098630
+attr interpolationmode  sample-hold
+attr title  "message arrived, sum"
+scalar MaxWeightNet.D3 	arrive:mean 	1098.63
+attr interpolationmode  sample-hold
+attr title  "message arrived, mean"
+scalar MaxWeightNet.D3 	arrive:timeavg 	1098.5442835427
+attr interpolationmode  sample-hold
+attr title  "message arrived, timeavg"
+scalar MaxWeightNet.D3 	arrive:max 	2170
+attr interpolationmode  sample-hold
+attr title  "message arrived, max"
+statistic MaxWeightNet.D4 	"interarrival times"
+field count 2839
+field mean 0.035220147939416
+field stddev 0.029946142680315
+field sum 99.990000000001
+field sqrsum 6.0666999999999
+field min 0
+field max 0.1
+bin	-INF	0
+bin	-0.05	0
+bin	-0.043333333333333	0
+bin	-0.036666666666667	0
+bin	-0.03	0
+bin	-0.023333333333333	0
+bin	-0.016666666666667	0
+bin	-0.01	0
+bin	-0.0033333333333333	188
+bin	0.0033333333333333	0
+bin	0.01	831
+bin	0.016666666666667	407
+bin	0.023333333333333	0
+bin	0.03	311
+bin	0.036666666666667	233
+bin	0.043333333333333	0
+bin	0.05	201
+bin	0.056666666666667	134
+bin	0.063333333333333	0
+bin	0.07	131
+bin	0.076666666666667	93
+bin	0.083333333333333	0
+bin	0.09	81
+bin	0.096666666666667	229
+bin	0.10333333333333	0
+bin	0.11	0
+bin	0.11666666666667	0
+bin	0.12333333333333	0
+bin	0.13	0
+bin	0.13666666666667	0
+bin	0.14333333333333	0
+bin	0.15	0
+scalar MaxWeightNet.D4 	arrive:count 	1000
+attr interpolationmode  sample-hold
+attr title  "message arrived, count"
+scalar MaxWeightNet.D4 	arrive:sum 	969640
+attr interpolationmode  sample-hold
+attr title  "message arrived, sum"
+scalar MaxWeightNet.D4 	arrive:mean 	969.64
+attr interpolationmode  sample-hold
+attr title  "message arrived, mean"
+scalar MaxWeightNet.D4 	arrive:timeavg 	969.57044563565
+attr interpolationmode  sample-hold
+attr title  "message arrived, timeavg"
+scalar MaxWeightNet.D4 	arrive:max 	1839
+attr interpolationmode  sample-hold
+attr title  "message arrived, max"
+scalar MaxWeightNet.MW1.Q1 	queueingTime:mean 	1.5506542857143
+attr interpolationmode  none
+attr title  "queueing time at dequeue, mean"
+attr unit  s
+scalar MaxWeightNet.MW1.Q1 	queueingTime:max 	4.119
+attr interpolationmode  none
+attr title  "queueing time at dequeue, max"
+attr unit  s
+scalar MaxWeightNet.MW1.Q1 	busy:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "server busy state, timeavg"
+scalar MaxWeightNet.MW1.Q1 	qlen:timeavg 	49.143011440915
+attr interpolationmode  sample-hold
+attr title  "queue length, timeavg"
+scalar MaxWeightNet.MW1.Q1 	qlen:max 	52
+attr interpolationmode  sample-hold
+attr title  "queue length, max"
+scalar MaxWeightNet.MW1.Q2 	queueingTime:mean 	1.7170450294845
+attr interpolationmode  none
+attr title  "queueing time at dequeue, mean"
+attr unit  s
+scalar MaxWeightNet.MW1.Q2 	queueingTime:max 	3.909
+attr interpolationmode  none
+attr title  "queueing time at dequeue, max"
+attr unit  s
+scalar MaxWeightNet.MW1.Q2 	busy:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "server busy state, timeavg"
+scalar MaxWeightNet.MW1.Q2 	qlen:timeavg 	48.739899191936
+attr interpolationmode  sample-hold
+attr title  "queue length, timeavg"
+scalar MaxWeightNet.MW1.Q2 	qlen:max 	78
+attr interpolationmode  sample-hold
+attr title  "queue length, max"
+scalar MaxWeightNet.MW1.Q3 	queueingTime:mean 	2.1882909932354
+attr interpolationmode  none
+attr title  "queueing time at dequeue, mean"
+attr unit  s
+scalar MaxWeightNet.MW1.Q3 	queueingTime:max 	6.889
+attr interpolationmode  none
+attr title  "queueing time at dequeue, max"
+attr unit  s
+scalar MaxWeightNet.MW1.Q3 	busy:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "server busy state, timeavg"
+scalar MaxWeightNet.MW1.Q3 	qlen:timeavg 	48.207936634931
+attr interpolationmode  sample-hold
+attr title  "queue length, timeavg"
+scalar MaxWeightNet.MW1.Q3 	qlen:max 	89
+attr interpolationmode  sample-hold
+attr title  "queue length, max"
+scalar MaxWeightNet.MW1.Q4 	queueingTime:mean 	2.6541824376027
+attr interpolationmode  none
+attr title  "queueing time at dequeue, mean"
+attr unit  s
+scalar MaxWeightNet.MW1.Q4 	queueingTime:max 	3.999
+attr interpolationmode  none
+attr title  "queueing time at dequeue, max"
+attr unit  s
+scalar MaxWeightNet.MW1.Q4 	busy:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "server busy state, timeavg"
+scalar MaxWeightNet.MW1.Q4 	qlen:timeavg 	49.505960476838
+attr interpolationmode  sample-hold
+attr title  "queue length, timeavg"
+scalar MaxWeightNet.MW1.Q4 	qlen:max 	65
+attr interpolationmode  sample-hold
+attr title  "queue length, max"

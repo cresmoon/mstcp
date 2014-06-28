@@ -19,6 +19,7 @@ MaxWTimer::~MaxWTimer()
 
 void MaxWTimer::initialize()
 {
+
     g = 0;
 
     for(int i=0; i<4; i++)
@@ -28,7 +29,7 @@ void MaxWTimer::initialize()
     gateIn = 0;
 
     EV<<"Khoi tao ~ QL 1: "<< qLen[0] << ", QL 2: "<< qLen[1] <<", QL 3: "<< qLen[2] << ", QL 4: "<< qLen[3] << endl;
-    scheduleAt(simTime() + 0.1, Self );
+    scheduleAt(simTime() + 0.01, Self );
 }
 
 void MaxWTimer::handleMessage(cMessage *msg)
@@ -41,12 +42,18 @@ void MaxWTimer::handleMessage(cMessage *msg)
         {
             EV<<"QL 1: "<< qLen[0] << ", QL 2: "<< qLen[1] <<", QL 3: "<< qLen[2] << ", QL 4: "<< qLen[3] << endl;
 
-            g = maxQueue();                             //TIM CONG RA CO QUEUE LON NHAT
+            if(qLen[0]==qLen[1] && qLen[1]==qLen[2] && qLen[2]==qLen[3])
+            {    g = intuniform(0,3);
+                    EV<<"chon queue: "<<g<<endl;
+            }
+            else
+                g = maxQueue();                             //TIM CONG RA CO QUEUE LON NHAT
 
 //            EV<<"Cong ra cua msg : "<< g<< endl;
             cMessage *endmsg = new cMessage("endjob");
-            send(endmsg, "gate$o", g);
+            sendDelayed(endmsg, 0.0, "gate$o", g);
         }
+
         simtime_t timer = par("serviceClock");
         scheduleAt(simTime() + timer, Self);
     }
@@ -78,16 +85,17 @@ void MaxWTimer::handleMessage(cMessage *msg)
 //                EV << "update ql 4: " <<qLen[3] <<endl;
             }
 
-//        drop(msg);
+        drop(msg);
         cancelAndDelete(msg);
     }
 }
 
 int MaxWTimer::maxQueue()
 {
-    int maxIndex = 0;
+    int maxIndex = intuniform(0,3);
 
-    for (int i=1; i<4; i++)
+    EV<<"lay queue : "<<maxIndex<<endl;
+    for (int i=0; i<4; i++)
         if( qLen[maxIndex] < qLen[i])
             maxIndex = i;
 

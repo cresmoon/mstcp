@@ -28,15 +28,25 @@ class Source : public cSimpleModule
 {
   private:
         cMessage    *   timerMessage;
-        simtime_t      minRTT;
-        simtime_t      avgRTT;
-        simsignal_t      cWinSignal;
+        cMessage    *   nextMsg;
+        cMessage    *   msgCwnd;
+        cMessage    *   msgStat;
 
-        int         seqNum;                 //so luong goi gui di
-        int         cWin;                   //do rong cua window vi du = 5 goi
-        int         cWinMax;
+        simtime_t       minRTT;
+        simtime_t       RTT;
+        simtime_t       avgRTT;
+        simtime_t       upRTT;
+        simtime_t       upStat;
 
-        int         ackRcv[];               // mang kiem tra ack cua goi.
+
+        simsignal_t     cWinSignal;
+        simsignal_t     sendSignal;
+
+        int             seqNum;                 //so luong goi gui di
+        int             cWin;                   //do rong cua window vi du = 5 goi
+        int             updateSend;
+
+        int         ackRcv[10000];               // mang kiem tra ack cua goi.
                                             // + khoi tao cac element bang -1
                                             // + gui goi nao thi gan seqNum vao element dau tien trong mang phan tu
                                             // + khi nhan ack cua seq thi gan element co gia tri seqNum do bang -1
@@ -50,6 +60,7 @@ class Source : public cSimpleModule
         virtual void initialize();
         virtual void handleMessage(cMessage *msg);
         virtual int haveElement(int i,int j);
+//        virtual bool emptyElement();
         virtual void sendMessage(int j);
 
 };

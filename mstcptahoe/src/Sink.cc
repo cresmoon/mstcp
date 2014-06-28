@@ -29,12 +29,21 @@ void Sink::initialize()
     iaTimeHistogram.setName("interarrival times");
     arrivalsVector.setName("arrivals");
     arrivalsVector.setInterpolationMode(cOutVector::NONE);
+
+    msgSignal = registerSignal("arrive");
+    ackNum  = 0;
+    updateArr   = 0.1;
+    updateMsg = new cMessage("update");
+
+    emit(msgSignal, ackNum);
+    scheduleAt(simTime() + updateArr, updateMsg);
+
 }
 
 void Sink::handleMessage(cMessage *msg)
 {
     simtime_t d = simTime() - lastArrival;
-    simtime_t delay = 0.1;
+    simtime_t delay = 0.05;
 //    EV << "Thoi gian toi gan nhat "<<d<< endl;
 
     const char * temp ;
@@ -44,29 +53,39 @@ void Sink::handleMessage(cMessage *msg)
 
     if(strcmp(temp,"Data")==0)    //neu la goi DataS thi reply 1 goi ACKs
     {
-        if (uniform(0,1) < 0.05)
-           {
-               EV << "\"Losing\" message.\n";
-               bubble("message lost");  // making animation more informative...
-               delete msg;
-           }
-        else
-        {
+//        if (uniform(0,1) < 0)
+//           {
+//               EV << "\"Losing\" message.\n";
+//               bubble("message lost");  // making animation more informative...
+//               drop(msg);
+//               cancelAndDelete(msg);
+//           }
+//        else
+//        {
 //            EV<<"Nhan dc du lieu : "<<temp<<endl;
 
+            ackNum++;
             tcpMsg * rcMsg = check_and_cast<tcpMsg *>(msg);
             tcpMsg * replyMsg = new tcpMsg("ACKs");
 
             replyMsg->setSrc(i);
             replyMsg->setDest(j);
-            replyMsg->setAck(1);
+            replyMsg->setAck(ackNum);
             replyMsg->setSeq(rcMsg->getSeq());
             replyMsg->setTimestamp(msg->getTimestamp());    //copy lai timestamp luc gui goi di
 
             sendDelayed(replyMsg, delay ,"out", -1);
-            delete msg;
-        }
 
+
+            drop(msg);
+            cancelAndDelete(msg);
+//        }
+
+    }
+    else
+    {
+        emit(msgSignal, ackNum);
+        scheduleAt(simTime() + updateArr, updateMsg);
     }
 
 
